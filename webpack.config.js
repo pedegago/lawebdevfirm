@@ -6,7 +6,7 @@ module.exports = {
     entry: './src/js/app.js',
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'js/app.js'
+        filename: 'app.js'
     },
     module: {
         rules: [
@@ -32,21 +32,20 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, './index.html'),
-            inject: true,
+            template: path.join(__dirname, './src/index.html'),
+            inject: false,
             minify: {
                 html5: true,
                 collapseWhitespace: true,
                 removeComments: true,
                 removeOptionalTags: true,
-                removeRedundantAttributes: true,
+                //removeRedundantAttributes: true,
                 removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
                 useShortDoctype: true
             }
         }),
         new MiniCssExtractPlugin({
-            filename: 'css/app.css'
+            filename: 'app.css'
         })
     ],
 };
