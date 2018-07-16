@@ -31,21 +31,17 @@ module.exports = {
         ]
     },
     plugins: [
+        new MiniCssExtractPlugin({
+            filename: 'app.css'
+        }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, './src/index.html'),
             inject: false,
             minify: {
                 html5: true,
                 collapseWhitespace: true,
-                removeComments: true,
-                removeOptionalTags: true,
-                //removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                useShortDoctype: true
+                removeComments: true
             }
         }),
-        new MiniCssExtractPlugin({
-            filename: 'app.css'
-        })
     ],
 };
