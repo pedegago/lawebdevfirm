@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require("webpack");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -27,21 +28,57 @@ module.exports = {
                         presets: ['es2015']
                     }
                 }
+            },
+            {
+                test: /\.html$/,
+                use: {
+                    loader: 'html-loader'
+                }
+            },
+            {
+                test: /\.(svg|jpg|png)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'img'
+                    }
+                }
+            },
+            {
+                test: /\.(ttf|eot|woff2?)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts'
+                    }
+                }
             }
         ]
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
         new MiniCssExtractPlugin({
             filename: 'app.css'
-        }),
-        new HtmlWebpackPlugin({
-            template: path.join(__dirname, './src/index.html'),
-            inject: false,
-            minify: {
-                html5: true,
-                collapseWhitespace: true,
-                removeComments: true
-            }
-        }),
-    ],
+        })      
+    ].concat(function (){
+        return [
+            'index'
+        ].map(file => {
+            return new HtmlWebpackPlugin({
+                template: path.join(__dirname, `./src/${file}.html`),
+                filename: `${file}.html`,
+                inject: false,
+                minify: {
+                    html5: true,
+                    collapseWhitespace: true,
+                    removeComments: true
+                }
+            })
+        });
+    }.call())
 };

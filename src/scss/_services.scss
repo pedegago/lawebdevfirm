@@ -1,0 +1,57 @@
+.services {
+    & > div {
+        @extend .container;
+    }
+    h2 {
+        @extend .text-uppercase;
+        @include font(20px, bold);
+        margin-bottom: 40px;
+    }
+    article {
+        @extend .row;
+        & > div {
+            @extend .col-12, .col-md-4, .text-center;
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    figure {
+        display: inline-block;
+        margin-bottom: 12px;
+        width: 57px;
+        height: 50px;
+    }
+    .develop-icon {
+        @include icon(-93px);
+    }
+    .uxui-icon {
+        @include icon(-144px);
+    }
+    .ecommerce-icon {
+        @include icon(-208px, 9px);
+        width: 62px;
+    }
+    h1 {
+        @include font(21px, bold);
+        margin-bottom: 12px;
+    }
+    p {
+        @include font(14px);
+        margin-bottom: 20px;
+    }
+    a {
+        @extend .right-arrow;
+    }
+    @include media-breakpoint-up(md){
+        h2 {
+            margin-bottom: 52px;
+        }
+        article > div {
+            margin-bottom: 0!important;
+        }
+        p {
+            margin-bottom: 45px;
+        }
+    }
+}

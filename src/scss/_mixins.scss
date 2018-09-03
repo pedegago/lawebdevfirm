@@ -1,0 +1,37 @@
+@mixin font ($size, $weight: false){
+    font-size: $size;
+    @if $weight != false {
+        font-weight: $weight;
+    }
+}
+
+@mixin icon ($x, $y: false, $size: false){
+    @if $y == false {
+        $y: 0;
+    }
+    background: {
+        image: url(../img/sprite.svg);
+        position: $x $y;
+        repeat: no-repeat;
+    }
+    @if $size {
+        background-size: $size;
+    } @else {
+        background-size: 730px;
+    }
+}
+
+@mixin flex ($horizontal:false, $vertical: false, $wrap: false, $column: false){
+    @extend .d-flex;
+    @if $horizontal {
+        @extend .justify-content-#{$horizontal};
+    }
+    @if $vertical {
+        @extend .align-items-#{$vertical};
+    }
+    @if $column {
+        @extend .flex-column;
+    } @else if $wrap {
+        @extend .flex-wrap;
+    }
+}

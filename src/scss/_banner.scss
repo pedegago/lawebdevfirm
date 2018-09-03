@@ -1,0 +1,53 @@
+.banner {
+    background: {
+        image: url(../img/background.jpg);
+        position: bottom center;
+        repeat: no-repeat;
+        size: cover;
+        color: $color-lightblue;
+    }
+    & > div {
+        @extend .container;
+        margin-top: 125px!important;
+    }
+    .imago {
+        @include icon(0, false, 542px);
+        margin-bottom: 23px;
+        width: 65px;
+        height: 75px;
+    }
+    .logo {
+        @include icon(-72px, -41px, 520px);
+        margin-bottom: 13px;
+        width: 285px;
+        height: 20px;
+    }
+    h1 {
+        @include font(18px);
+        margin-bottom: 53px;
+        text-align: center;
+        width: 215px;
+    }
+    button {
+        @extend .get-started-today;
+        background-color: $color-lightblue;
+    }
+    @include media-breakpoint-up(sm){
+        background-size: auto;
+        .imago {
+            @include icon(0);
+            margin-bottom: 32px;
+            width: 87px;
+            height: 98px;
+        }
+        .logo {
+            @include icon(-95px, -57px, 700px);
+            width: 386px;
+            height: 25px;
+        }
+        h1 {
+            @include font(20px);
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.question {
+    background: {
+        image: url(../img/background.jpg);
+        position: 50% 50px;
+        repeat: no-repeat;
+        size: cover;
+        color: $color-lightblue;
+    }
+    & > div {
+        @extend .container;
+    }
+    figure {
+        @include icon(-513px);
+        margin-bottom: 17px;
+        width: 64px;
+        height: 87px;
+    }
+    p {
+        @extend .text-center, .font-italic;
+        @include font(18px);
+        line-height: 24px;
+        margin-bottom: 20px;
+        max-width: 500px;
+    }
+    hr {
+        background-color: $color-blue;
+        border: 1px solid $color-blue;
+        border-radius: 10px;
+        height: 1px;
+        width: 70px;
+    }
+    @include media-breakpoint-up(sm){
+        background-size: auto;
+        figure {
+            margin-bottom: 45px;
+        }
+        p {
+            @include font(22px);
+            line-height: 28px;
+            margin-bottom: 54px;
+        }
+    }
+}

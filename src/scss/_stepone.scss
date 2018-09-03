@@ -1,0 +1,59 @@
+.stepone {
+    & > div {
+        @extend .container, .text-center;
+    }
+    figure {
+        @include icon(-579px);
+        margin-bottom: 17px;
+        width: 66px;
+        height: 68px;
+    }
+    h2 {
+        @extend .text-center;
+        @include font(22px, bold);
+        margin-bottom: 16px;
+    }
+    p {
+        @include font(18px);
+        line-height: 24px;
+        margin-bottom: 40px;
+        max-width: 500px;
+    }
+    form {
+        @extend .row;
+    }
+    input,
+    textarea {
+        @extend .w-100;
+        border: 0;
+        border-bottom: 1px solid silver;
+        padding: 2px 10px;
+        &::placeholder {
+            @include font(13px);
+        }
+    }
+    form > div {
+        @extend .col-12;
+        &:not(:last-of-type) {
+            @extend .col-sm-6, .col-lg-4;
+        }
+        margin-bottom: 22px;
+        &:last-of-type {
+            margin-bottom: 55px;
+        }
+    }
+    textarea {
+        min-height: 30px;
+        max-height: 100px;
+        overflow: hidden;
+    }
+    button {
+        @extend .get-started-today, .mx-auto;
+        background-color: white;
+    }
+    @include media-breakpoint-up(sm){
+        figure {
+            margin-bottom: 45px;
+        }
+    }
+}

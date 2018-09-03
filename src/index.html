@@ -3,185 +3,168 @@
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Los Angeles Web Development Firm builds the fastest, reliable and most secure websites, web stores and web applications.">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Los Angeles Web Development Firm">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
         <title>Los Angeles Web Development Firm</title>
         <link rel="icon" href="">
-        <link rel="text/css" href="app.css">
+        <link rel="stylesheet" href="app.css">
     </head>
     <body>
         <header>
             <nav>
-                <ul>
-                    <li>
-                        <a href="#">home</a>
-                    </li>
-                    <li>
-                        <a href="#">who we are</a>
-                    </li>
-                    <li>
-                        <a href="#">what we do</a>
-                    </li>
-                    <li>
-                        <a href="#">our work</a>
-                    </li>
-                    <li>
-                        <a href="#">contact</a>
-                    </li>
-                    <li>
-                        <a href="#">877-862-4242</a>
-                    </li>
+                <div>
+                    <button href="#header" data-toggle="collapse"></button>
+                    <a href="tel:8778624242" class="active">877-862-4242</a>
+                </div>
+                <ul id="header" class="collapse">
+                    <li><a href="#" class="active">home</a></li>
+                    <li><a href="#">who we are</a></li>
+                    <li><a href="#">what we do</a></li>
+                    <li><a href="#">our work</a></li>
+                    <li><a href="#">contact</a></li>
                 </ul>
             </nav>
-            <img src="" alt="Los Angeles Web Development Firm">
-            <h1>la web development firm</h1>
-            <h2>we build websites, web stores & web apps</h2>
-            <button>get started today</button>
         </header>
         <main>
-            <section>
-                <h3>services</h3>
-                <article>
-                    <figure></figure>
-                    <h1>web development</h1>
-                    <p>At Los Angeles Web Development Firm, we utilize the latest technology to develop the fastest, reliable and most secure websites, web stores and web applications.</p>
-                    <button>learn more</button>
-                </article>
-                <article>
-                    <figure></figure>
-                    <h1>ux/ui design</h1>
-                    <p>An excellent user experience on a website is one of the key factors to a successful online business. Strategic content architecture and placement will lead to increased conversions.</p>
-                    <button>learn more</button>
-                </article>
-                <article>
-                    <figure></figure>
-                    <h1>e-comerce</h1>
-                    <p>Depending on your business needs we can build on a variety of platforms like Magento, Woo Commerce, X-Cart, Open Cart, Squirrel Cart or provide a custom platform.</p>
-                    <button>learn more</button>
-                </article>
+            <section class="banner">
+                <div>
+                    <figure class="imago"></figure>
+                    <figure class="logo"></figure>
+                    <h1>We Build Websites, Web Stores & Web Apps</h1>
+                    <button>Get Started Today</button>
+                </div>
             </section>
-            <section>
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                <button>see all works</button>
+            <section class="services">
+                <div>
+                    <h2>services</h2>
+                    <article>
+                        <div>
+                            <figure class="develop-icon"></figure>
+                            <h1>Web Development</h1>
+                            <p>At Los Angeles Web Development Firm, we utilize the latest technology to develop the fastest, reliable and most secure websites, web stores and web applications.</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                        <div>
+                            <figure class="uxui-icon"></figure>
+                            <h1>UX/UI Design</h1>
+                            <p>An excellent user experience on a website is one of the key factors to a successful online business. Strategic content architecture and placement will lead to increased conversions.</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                        <div>
+                            <figure class="ecommerce-icon"></figure>
+                            <h1>e-Commerce</h1>
+                            <p>Depending on your business needs we can build on a variety of platforms like Magento, Woo Commerce, X-Cart, Open Cart, Squirrel Cart or provide a custom platform.</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </article>
+                </div>
             </section>
-            <section>
-                <figure></figure>
-                <p>The LA Web Development Firm creates and ecutes a strategic plan that companies valuable time, money and energy resources.</p>
-                <button>learn more</button>
+            <section class="works">
+                <div>
+                    <figure><img src="./img/work.jpg" alt="La Web Development Firm"></figure>
+                    <a href="#">See All Works</a>
+                </div>
             </section>
-            <section>
-                <article>
+            <section class="benefits">
+                <div>
                     <figure></figure>
-                    <blockquote>They knew exactly how to design the sites to provide an excellent user experience and the numbers stared to go up. With their help we were able to grow our business 300% for 3 consecutive years. We continue to grow and are very happy with our over a decade long working relationship.</blockquote>
-                    <ul>
-                        <li>strategy consulting</li>
-                        <li>hosting & maintenance</li>
-                        <li>e-comerce development</li>
-                        <li>
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
-                            <p>
-                                mr. Robert Savona
-                                <span>savona studios, llc.</span>
-                            </p>
-                        </li>
-                    </ul>
-                </article>
+                    <p>The LA Web Development Firm creates and ecutes a strategic plan that saves companies valuable time, money and energy resources.</p>
+                    <a href="#">Learn More</a>
+                </div>
             </section>
-            <section>
-                <figure></figure>
-                <p>How much time, money and resources would an Improper solution cost you?</p>
-                <hr>
-            </section>
-            <section>
-                <article>
+            <section class="testimonials">
+                <div>
                     <figure></figure>
-                    <h3>step 1 - let's discuss your business goals</h3>
+                    <article>
+                        <blockquote>They knew exactly how to design the sites to provide an excellent user experience and the numbers stared to go up. With their help we were able to grow our business 300% for 3 consecutive years. We continue to grow and are very happy with our over a decade long working relationship.</blockquote>
+                        <ul>
+                            <li class="strategy-icon">Strategy Consulting</li>
+                            <li class="hosting-icon">Housting & Maintenance</li>
+                            <li class="ecommerce-icon">E-Commerce Development</li>
+                            <li>
+                                <figure>
+                                    <img src="./img/person.jpg" alt="La Web Development Firm">
+                                    <figcaption>
+                                        Mr. Pablo David
+                                        <span>pencil studios, llc.</span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            <section class="question">
+                <div>
+                    <figure></figure>
+                    <p>How much time, money and resources would an Improper solution cost you?</p>
+                    <hr>
+                </div>
+            </section>
+            <section class="stepone">
+                <div>
+                    <figure></figure>
+                    <h2>Step 1 - Let's Discuss Your Business Goals</h2>
                     <p>Have Us Call You to Schedule an Appointment!</p>
                     <form>
-                        <input type="text" placeholder="First name">
-                        <input type="text" placeholder="Last name">
-                        <input type="email" placeholder="Email">
-                        <input type="text" placeholder="Phone number">
-                        <input type="text" placeholder="Sell services">
-                        <input type="url" placeholder="Website">
-                        <textarea placeholder="Additional comments"></textarea>
-                        <button type="submit">get started today</button>
+                        <div><input type="text" placeholder="First Name"></div>
+                        <div><input type="text" placeholder="Last Name"></div>
+                        <div><input type="email" placeholder="Email"></div>
+                        <div><input type="number" placeholder="Phone Number"></div>
+                        <div><input type="text" placeholder="Sell Services"></div>
+                        <div><input type="url" placeholder="Website"></div>
+                        <div><textarea placeholder="Additional Comments"></textarea></div>
+                        <button type="submit">Get Started Today</button>
                     </form>
-                </article>
+                </div>
             </section>
         </main>
         <footer>
             <div>
-                <h4>la web development firm</h4>
-                <address>N. Brand Blvd. Suite 1850 Glendele, CA 91203 (+1)877-862-4242</address>
+                <div>
+                    <address>
+                        <h3>LA Web Development Firm</h3>
+                        550 N. Brand Blvd. Suite 1850
+                        <span>Glendale, CA 91203</span>
+                        <a href="tel:8778624242">(+1) 877-862-4242</a>
+                    </address>
+                    <nav id="footer-nav">
+                        <a href="#company" data-toggle="collapse"><h3>Company</h3></a>
+                        <ul id="company" class="collapse" data-parent="#footer-nav">
+                            <li><h3>Company</h3></li>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                        <a href="#wwd" data-toggle="collapse"><h3>What We Do</h3></a>
+                        <ul id="wwd" class="collapse" data-parent="#footer-nav">
+                            <li><h3>What We Do</h3></li>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">UX/UI (Web) Design</a></li>
+                            <li><a href="#">E-Commerce</a></li>
+                        </ul>
+                        <a href="#policy" data-toggle="collapse"><h3>Policy</h3></a>
+                        <ul id="policy" class="collapse" data-parent="#footer-nav">
+                            <li><h3>Policy</h3></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="socials">
+                        <li><a href="#"><i class="facebook-icon"></i></a></li>
+                        <li><a href="#"><i class="in-icon"></i></a></li>
+                        <li><a href="#"><i class="instagram-icon"></i></a></li>
+                        <li><a href="#"><i class="google-icon"></i></a></li>
+                    </ul>
+                </div>
+                <p>
+                    ©2000 - 2018 LA Web Development Firm. All Rights Reserved.
+                    <span>A Leon Company</span>
+                </p>
             </div>
-            <nav>
-                <div>
-                    <h4>company</h4>
-                    <ul>
-                        <li>
-                            <a href="#">who we are</a>
-                        </li>
-                        <li>
-                            <a href="#">contact us</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>what we do</h4>
-                    <ul>
-                        <li>
-                            <a href="#">web development</a>
-                        </li>
-                        <li>
-                            <a href="#">ux/ui (web design)</a>
-                        </li>
-                        <li>
-                            <a href="#">e-comerce</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>policy</h4>
-                    <ul>
-                        <li>
-                            <a href="#">privacy policy</a>
-                        </li>
-                        <li>
-                            <a href="#">terms & conditions</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <ul>
-                <li>
-                    <a href="#">
-                        <i>facebook-icon</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i>in-icon</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i>instagram-icon</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i>google+-icon</i>
-                    </a>
-                </li>
-            </ul>
-            <p>
-                ©2000 - 2018 LA Web Development Firm. All Rights Reserved.
-                <span>a leon company</span>
-            </p>
         </footer>
         <script src="app.js"></script>
     </body>

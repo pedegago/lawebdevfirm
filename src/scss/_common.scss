@@ -1,0 +1,90 @@
+body {
+    font-family: opensans;
+    color: $color-gray;
+}
+
+a,
+img,
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    border: 0;
+}
+
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+p,
+i,
+figure,
+address {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a, button {
+    color: $color-gray;
+    &:hover {
+        color: black;
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+header,
+section,
+footer {
+    @include flex(center);
+}
+
+.container {
+    @include flex(false, center, false, true);
+    @include media-breakpoint-up(sm){
+        margin: 125px 16px;
+    }
+    padding: 0;
+    margin: 45px 16px;
+}
+
+.right-arrow {
+    @include font(14px, bold);
+    &::after {
+        @include icon(-352px, -14px, 400px);
+        content: '';
+        display: inline-block;
+        margin-left: 7px;
+        vertical-align: middle;
+        height: 20px;
+        width: 23px;
+    }
+}
+
+.get-started-today {
+    @extend .right-arrow;
+    border: 1px solid $color-blue;
+    border-radius: 38px;
+    height: 38px;
+    width: 186px;
+    &:hover {
+        border-color: $color-darkblue;
+    }
+}
+
+* {
+    //border: .1px solid green;
+}

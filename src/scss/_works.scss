@@ -1,0 +1,22 @@
+.works {
+    & > div {
+        @extend .container;
+        margin-top: 0!important;
+    }
+    figure {
+        @extend .text-center;
+        width: 100%;
+    }
+    img {
+        max-width: 100%;
+    }
+    a {
+        @extend .right-arrow;
+        margin-top: 20px;
+    }
+    @include media-breakpoint-up(sm){
+        a {
+            margin-top: -22px;
+        }
+    }
+}

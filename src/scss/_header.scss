@@ -1,0 +1,65 @@
+header {
+    @extend .fixed-top;
+    width: 100%;
+    &.expanded {
+        background-color: $color-lightblue;
+    }
+    nav {
+        @extend .container;
+        margin: 25px 16px!important;
+        & > * {
+            width: 100%;
+        }
+    }
+    div {
+        @include flex(between, center);
+    }
+    button {
+        @extend .d-sm-none;
+        background-color: transparent;
+        &::before {
+            @include font(20px);
+            color: $color-gray;
+            content: '☰';
+        }
+    }
+    ul {
+        @extend .d-sm-flex;
+        margin-top: 12px;
+        text-transform: uppercase;
+    }
+    li:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    a {
+        @include font(14px, bold);
+        display: block;
+    }
+    .active {
+        color: $color-orange;
+    }
+    @include media-breakpoint-up(sm){
+        nav {
+            flex-direction: row!important;
+            justify-content: space-between!important;
+            & > * {
+                width: auto;
+            }
+        }
+        div {
+            order: 2;
+        }
+        ul {
+            margin: 0;
+        }
+        li {
+            margin-right: 25px;
+            margin-bottom: 0!important;
+        }
+    }
+    @include media-breakpoint-only(sm){
+        li {
+            margin-right: 15px;
+        }
+    }
+}

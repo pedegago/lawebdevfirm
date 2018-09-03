@@ -1,0 +1,114 @@
+footer {
+    @include font(13px);
+    background-color: $color-lightblue;
+    & > div {
+        @extend .container;
+        margin-bottom: 40px!important;
+        & > div {
+            @extend .w-100;
+            @include flex(between, false, true);
+        }
+    }
+    address {
+        h3 {
+            margin-bottom: 12px;
+        }
+        span {
+            display: block;
+        }
+    }
+    nav {
+        @include flex(between);
+        & > a {
+            @extend .d-sm-none;
+            margin-bottom: 12px;
+            h3::after {
+                @extend .float-right;
+                content: '+';
+                margin-left: -9px;
+            }
+        }
+        li:first-child {
+            @extend .d-none, .d-sm-block;
+        }
+        ul {
+            @extend .d-sm-block;
+            margin: 0 23px;
+        }
+    }
+    h3 {
+        @include font(16px, bold);
+    }
+    a {
+        display: block;
+    }
+    li {
+        margin-bottom: 12px;
+    }
+    .socials {
+        i {
+            background-size: 800px!important;
+            display: block;
+            width: 22px;
+            height: 22px;
+        }
+    }
+    i.facebook-icon {
+        @include icon(-712px);
+        width: 15px;
+    }
+    i.in-icon {
+        @include icon(-756px);
+    }
+    i.instagram-icon {
+        @include icon(-731px);
+    }
+    i.google-icon {
+        @include icon(-778px);
+    }
+    p {
+        @extend .text-center;
+        margin-top: 20px;
+        span {
+            display: block;
+            margin-top: 2px;
+            &::before,
+            &::after {
+                content: ' - ';
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        & > div > div {
+            align-items: center;
+            flex-direction: column;
+        }
+        address {
+            margin: 15px 0;
+            order: 2;
+            text-align: center;
+        }
+        nav {
+            width: 100%;
+            ul {
+                margin: 0;
+            }
+        }
+        .socials {
+            display: flex;
+            order: 3;
+            li {
+                margin: 0 5px;
+            }
+        }
+    }
+    @include media-breakpoint-down(xs){
+        nav {
+            flex-direction: column;
+            text-align: center;
+        }
+        p {
+            @include font(10px);
+        }
+    }
+}

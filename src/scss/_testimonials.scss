@@ -1,0 +1,75 @@
+.testimonials {
+    & > div {
+        @extend .container;
+        & > figure {
+            @include icon(-322px);
+            margin-bottom: 17px;
+            width: 72px;
+            height: 50px;
+            
+        }
+    }
+    article {
+        @extend .row;
+    }
+    blockquote {
+        @extend .col-12, .col-md;
+        @include font(18px);
+        margin-bottom: 40px;
+    }
+    ul {
+        @extend .col-auto;
+    }
+    li:not(:last-child) {
+        @include font(14px, bold);
+        &::before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: 41px;
+        }
+    }
+    .strategy-icon::before {
+        @include icon(-392px, 0px);
+        width: 31px;
+        margin: 0 22px;
+    }
+    .hosting-icon::before {
+        @include icon(-423px, 5px);
+        width: 38px;
+        margin: 0 18px;
+    }
+    .ecommerce-icon::before {
+        @include icon(-464px, 5px);
+        width: 50px;
+        margin: 0 12px;
+    }
+    article figure {
+        margin-top: 21px;
+    }
+    img {
+        border-radius: 100%;
+        margin-right: 12px;
+        width: 80px;
+        height: 80px;
+    }
+    figcaption {
+        @include font(15px, bold);
+        display: inline-block;
+        vertical-align: middle;
+    }
+    span {
+        @extend .text-uppercase;
+        @include font(14px, bold);
+        color: $color-darkblue;
+        display: block;
+    }
+    @include media-breakpoint-up(sm){
+        & > div > figure {
+            margin-bottom: 65px;
+        }
+        blockquote {
+            padding-right: 30px;
+        }
+    }
+}
