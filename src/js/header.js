@@ -15,9 +15,15 @@ btn.click(() => {
         backgroundBehavior(nav.hasClass("show"));
 });
 
+btn.blur(() => {
+    if (nav.hasClass("show")) 
+        btn.click();
+});
+
 $(window).scroll(function(){
     if (!nav.hasClass("show"))
         backgroundBehavior(scrollStatus());
+    header.find("figure")[!scrollStatus() ? "show" : "hide"]();
 });
 
 $(window).scroll();

@@ -26,16 +26,16 @@
             content: '';
             display: inline-block;
             vertical-align: middle;
-            height: 41px;
+            height: 42px;
         }
     }
     .strategy-icon::before {
-        @include icon(-392px, 0px);
+        @include icon(-392px, -1px);
         width: 31px;
         margin: 0 22px;
     }
     .hosting-icon::before {
-        @include icon(-423px, 5px);
+        @include icon(-423px);
         width: 38px;
         margin: 0 18px;
     }

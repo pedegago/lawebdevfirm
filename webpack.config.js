@@ -9,6 +9,10 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         filename: 'app.js'
     },
+    devServer: {
+        host: '0.0.0.0',
+        disableHostCheck: true
+    },
     module: {
         rules: [
             {

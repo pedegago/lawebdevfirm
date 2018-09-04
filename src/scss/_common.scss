@@ -64,13 +64,13 @@ footer {
 .right-arrow {
     @include font(14px, bold);
     &::after {
-        @include icon(-352px, -14px, 400px);
+        @include icon(-357px, -17px, 402px);
         content: '';
         display: inline-block;
         margin-left: 7px;
         vertical-align: middle;
         height: 20px;
-        width: 23px;
+        width: 21px;
     }
 }
 

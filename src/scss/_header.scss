@@ -13,6 +13,23 @@ header {
     }
     div {
         @include flex(between, center);
+        a::before {
+            @include icon(-618px, -22px, 650px);
+            content: '';
+            display: inline-block;
+            height: 41px;
+            width: 34px;
+            vertical-align: middle;
+        }
+    }
+    figure {
+        @include icon(4px, 0, 302px);
+        display: none;
+        width: 42px;
+        height: 41px;
+    }
+    span {
+        @extend .d-none, .d-sm-inline;
     }
     button {
         @extend .d-sm-none;
@@ -48,6 +65,15 @@ header {
         }
         div {
             order: 2;
+            a::before {
+                background: transparent;
+                content: '';
+                height: 0;
+                width: 0;
+            }
+        }
+        figure {
+            display: none!important;
         }
         ul {
             margin: 0;
