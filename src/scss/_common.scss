@@ -9,8 +9,16 @@ button,
 input,
 select,
 textarea {
-    outline: 0;
     border: 0;
+}
+
+a:focus,
+img:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 0;
 }
 
 hr,
@@ -84,7 +92,7 @@ footer {
         border-color: $color-darkblue;
     }
 }
-
+/*
 * {
-    //border: .1px solid green;
-}
+    border: .1px solid green;
+}*/
